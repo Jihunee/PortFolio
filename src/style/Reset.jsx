@@ -36,10 +36,11 @@ body {
 	line-height: 1;
   position: relative;
   overflow: hidden;
-  background-image: url("assets/image/bg2.png");
+  background-image: url("assets/image/bg1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+ 
   width: 100%;
   height: 100vh;
 }

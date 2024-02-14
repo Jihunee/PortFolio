@@ -32,8 +32,8 @@ const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 4px solid #d5b3ff;
-  border-radius: 30px;
+  border-bottom: 4px solid white;
+  border-radius: 0 0 30px 30px;
   background-color: white;
   & a {
     text-decoration: none;

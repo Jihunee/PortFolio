@@ -10,7 +10,11 @@ function Home() {
     <Container>
       <Typewriter
         options={{
-          strings: ["안녕하세요!", "저는 프론트엔드 개발자 입니다."],
+          strings: [
+            "안녕하세요!",
+            "저는 프론트엔드 개발자 입니다!",
+            "저의 포트폴리오를 보여드릴게요!",
+          ],
           autoStart: true,
           loop: true,
         }}
@@ -20,7 +24,7 @@ function Home() {
           navigate("/about");
         }}
       >
-        <GrNext size={100} style={{ color: "#d5b3ff" }} />
+        <GrNext size={100} style={{ color: "white" }} />
       </NextPage>
     </Container>
   );
@@ -35,7 +39,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  color: white;
   font-size: 50px;
   font-family: "Cafe24";
 `;
