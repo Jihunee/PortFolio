@@ -19,12 +19,13 @@ function Home() {
           loop: true,
         }}
       />
+
       <NextPage
         onClick={() => {
           navigate("/about");
         }}
       >
-        <GrNext size={100} style={{ color: "white" }} />
+        <GrNext size={100} />
       </NextPage>
     </Container>
   );
@@ -39,7 +40,6 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   font-size: 50px;
   font-family: "Cafe24";
 `;

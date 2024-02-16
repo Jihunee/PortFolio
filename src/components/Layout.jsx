@@ -35,6 +35,7 @@ const Header = styled.div`
   border-bottom: 4px solid white;
   border-radius: 0 0 30px 30px;
   background-color: white;
+  border-bottom: 10px solid #d5b3ff;
   & a {
     text-decoration: none;
     color: inherit;

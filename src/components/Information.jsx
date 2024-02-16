@@ -12,7 +12,7 @@ function Information() {
     <Container>
       <Infobox
         style={{
-          boxShadow: "-5px -5px 5px 5px white, 5px 5px 30px 5px white",
+          boxShadow: "-5px -5px 5px 5px white, 5px 5px 30px 5px gray",
         }}
       >
         <FaUser size={40} />
@@ -21,7 +21,7 @@ function Information() {
       </Infobox>
       <Infobox
         style={{
-          boxShadow: "-5px -5px 5px 5px white, 5px 5px 30px 5px white",
+          boxShadow: "-5px -5px 5px 5px white, 5px 5px 30px 5px gray",
         }}
       >
         <IoCalendarClear size={40} />
@@ -30,7 +30,7 @@ function Information() {
       </Infobox>
       <Infobox
         style={{
-          boxShadow: "-5px -5px 5px 5px white, 5px 5px 30px 5px white",
+          boxShadow: "-5px -5px 5px 5px white, 5px 5px 30px 5px gray",
         }}
       >
         <FaLocationDot size={40} />
@@ -40,7 +40,7 @@ function Information() {
       </Infobox>
       <Infobox
         style={{
-          boxShadow: "-5px -5px 5px 5px white, 5px 5px 30px 5px white",
+          boxShadow: "-5px -5px 5px 5px white, 5px 5px 30px 5px gray",
         }}
       >
         <IoCall size={40} />
@@ -49,7 +49,7 @@ function Information() {
       </Infobox>
       <Infobox
         style={{
-          boxShadow: "-5px -5px 5px 5px white, 5px 5px 30px 5px white",
+          boxShadow: "-5px -5px 5px 5px white, 5px 5px 30px 5px gray",
         }}
       >
         <IoIosMail size={40} />
@@ -58,7 +58,7 @@ function Information() {
       </Infobox>
       <Infobox
         style={{
-          boxShadow: "-5px -5px 5px 5px white, 5px 5px 30px 5px white",
+          boxShadow: "-5px -5px 5px 5px white, 5px 5px 30px 5px gray",
         }}
       >
         <FaSchool size={40} />

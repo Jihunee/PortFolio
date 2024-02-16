@@ -25,14 +25,14 @@ function About() {
           navigate("/skills");
         }}
       >
-        <GrNext size={100} style={{ color: "white" }} />
+        <GrNext size={100} />
       </NextPage>
       <PrevPage
         onClick={() => {
           navigate("/");
         }}
       >
-        <GrPrevious size={100} style={{ color: "white" }} />
+        <GrPrevious size={100} />
       </PrevPage>
     </Container>
   );
@@ -75,5 +75,4 @@ const TypewerBox = styled.div`
   position: absolute;
   bottom: 200px;
   font-size: 30px;
-  color: white;
 `;
