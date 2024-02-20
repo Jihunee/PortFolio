@@ -35,12 +35,10 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
   position: relative;
-  overflow: hidden;
   background-image: url("assets/image/bg2.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  scroll-behavior: smooth;
 }
 ol, ul {
 	list-style: none;

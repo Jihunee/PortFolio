@@ -63,7 +63,8 @@ function Information() {
       >
         <FaSchool size={40} />
         <h1>부트캠프</h1>
-        <h2>스파르타 React-3기</h2>
+        <h2>내일배움캠프 </h2>
+        <h2>React-3기</h2>
       </Infobox>
     </Container>
   );

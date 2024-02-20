@@ -1,8 +1,9 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 function Layout() {
+  const location = useLocation();
   return (
     <>
       <Header>
@@ -10,10 +11,30 @@ function Layout() {
           <Link to="/">Jihun@PortFolio</Link>
         </Logo>
         <NavBar>
-          <Link to="/about">ABOUT</Link>
-          <Link to="skills">Skills</Link>
-          <Link to="projects">PROJECTS</Link>
-          <Link to="contact">CONTACT</Link>
+          <Link
+            className={location.pathname === "/about" ? "active" : ""}
+            to="/about"
+          >
+            ABOUT
+          </Link>
+          <Link
+            className={location.pathname === "/skills" ? "active" : ""}
+            to="skills"
+          >
+            Skills
+          </Link>
+          <Link
+            className={location.pathname === "/projects" ? "active" : ""}
+            to="projects"
+          >
+            PROJECTS
+          </Link>
+          <Link
+            className={location.pathname === "/contact" ? "active" : ""}
+            to="contact"
+          >
+            CONTACT
+          </Link>
         </NavBar>
       </Header>
       <Outlet />
@@ -54,6 +75,12 @@ const NavBar = styled.div`
   flex-direction: row;
   gap: 40px;
   font-size: 20px;
+  & .active {
+    background: linear-gradient(to right top, #d5b3ff, #b8ffc7);
+    color: transparent;
+    background-clip: text;
+    transform: scale(1.2);
+  }
 `;
 
 const Logo = styled.div`

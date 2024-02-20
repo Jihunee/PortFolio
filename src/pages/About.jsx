@@ -1,13 +1,9 @@
 import React from "react";
-import { GrNext } from "react-icons/gr";
-import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Information from "../components/Information";
 import Typewriter from "typewriter-effect";
-import { GrPrevious } from "react-icons/gr";
 
 function About() {
-  const navigate = useNavigate();
   return (
     <Container>
       <Information />
@@ -20,20 +16,6 @@ function About() {
           }}
         />
       </TypewerBox>
-      <NextPage
-        onClick={() => {
-          navigate("/skills");
-        }}
-      >
-        <GrNext size={100} />
-      </NextPage>
-      <PrevPage
-        onClick={() => {
-          navigate("/");
-        }}
-      >
-        <GrPrevious size={100} />
-      </PrevPage>
     </Container>
   );
 }
@@ -48,26 +30,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
-
-const NextPage = styled.div`
-  position: absolute;
-  right: 30px;
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    transform: translateX(20px);
-    cursor: pointer;
-  }
-`;
-
-const PrevPage = styled.div`
-  position: absolute;
-  left: 30px;
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    transform: translateX(-20px);
-    cursor: pointer;
-  }
 `;
 
 const TypewerBox = styled.div`

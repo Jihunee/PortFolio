@@ -1,11 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Typewriter from "typewriter-effect";
-import { GrNext } from "react-icons/gr";
-import { useNavigate } from "react-router-dom";
 
 function Home() {
-  const navigate = useNavigate();
   return (
     <Container>
       <Typewriter
@@ -19,14 +16,6 @@ function Home() {
           loop: true,
         }}
       />
-
-      <NextPage
-        onClick={() => {
-          navigate("/about");
-        }}
-      >
-        <GrNext size={100} />
-      </NextPage>
     </Container>
   );
 }
@@ -42,14 +31,4 @@ const Container = styled.div`
   align-items: center;
   font-size: 50px;
   font-family: "Cafe24";
-`;
-
-const NextPage = styled.div`
-  position: absolute;
-  right: 30px;
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    transform: translateX(20px);
-    cursor: pointer;
-  }
 `;

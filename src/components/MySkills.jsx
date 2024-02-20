@@ -43,7 +43,7 @@ function MySkills() {
 
   return (
     <Container>
-      <FrontSkillBox>
+      <SkillBox>
         <h1>Frontend</h1>
         <div style={{ display: "flex" }}>
           <img src="assets/image/icons/HTML.png" alt="HTML 이미지" />
@@ -52,15 +52,15 @@ function MySkills() {
         </div>
         {images.map((item) => {
           return (
-            <ImageBox>
+            <ImageBox key={item.title}>
               <img src={item.src} alt={`${item.title}이미지`} />
               <h2>{item.title}</h2>
             </ImageBox>
           );
         })}
-      </FrontSkillBox>
-      <div style={{ display: "flex", flexDirection: "column", gap: "30px" }}>
-        <BackSkillBox>
+      </SkillBox>
+      <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
+        <SkillBox>
           <h1>Backend</h1>
           <ImageBox>
             <img
@@ -76,8 +76,8 @@ function MySkills() {
             />
             <h2>SupaBase</h2>
           </ImageBox>
-        </BackSkillBox>
-        <CommunicationBox>
+        </SkillBox>
+        <SkillBox>
           <h1>Communication</h1>
           <ImageBox>
             <img src="assets/image/icons/figmaImg.png" alt="피그마 이미지" />
@@ -87,9 +87,13 @@ function MySkills() {
             <img src="assets/image/icons/slackImg.jpg" alt="슬랙 이미지" />
             <h2>Slack</h2>
           </ImageBox>
-        </CommunicationBox>
+          <ImageBox>
+            <img src="assets/image/icons/notionImg.png" alt="노션 이미지" />
+            <h2>Notion</h2>
+          </ImageBox>
+        </SkillBox>
       </div>
-      <VersionControlBox>
+      <SkillBox>
         <h1>VersionControl</h1>
         <ImageBox>
           <img src="assets/image/icons/gitImg.png" alt="깃 이미지" />
@@ -99,7 +103,7 @@ function MySkills() {
           <img src="assets/image/icons/githubImg.png" alt="깃허브 이미지" />
           <h2>Github</h2>
         </ImageBox>
-      </VersionControlBox>
+      </SkillBox>
     </Container>
   );
 }
@@ -111,11 +115,11 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 100px;
   font-family: "Cafe24";
 `;
 
-const FrontSkillBox = styled.div`
+const SkillBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,6 +129,7 @@ const FrontSkillBox = styled.div`
   background-color: white;
   border-radius: 30px;
   box-shadow: -5px -5px 5px 5px white, 5px 5px 30px 5px gray;
+  transition: all 0.2s ease-in-out;
   & h1 {
     text-align: center;
     width: 100%;
@@ -136,6 +141,9 @@ const FrontSkillBox = styled.div`
   }
   & img {
     width: 50px;
+  }
+  &:hover {
+    transform: translateY(-20px);
   }
 `;
 
@@ -144,76 +152,4 @@ const ImageBox = styled.div`
   display: flex;
   align-items: center;
   gap: 30px;
-`;
-
-const BackSkillBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 250px;
-  gap: 10px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 30px;
-  box-shadow: -5px -5px 5px 5px white, 5px 5px 30px 5px gray;
-  & h1 {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 20px;
-    font-size: 25px;
-    border-bottom: 3px solid gray;
-    color: orange;
-    padding-bottom: 10px;
-  }
-  & img {
-    width: 50px;
-  }
-`;
-
-const CommunicationBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 250px;
-  gap: 10px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 30px;
-  box-shadow: -5px -5px 5px 5px white, 5px 5px 30px 5px gray;
-  & h1 {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 20px;
-    font-size: 25px;
-    border-bottom: 3px solid gray;
-    color: orange;
-    padding-bottom: 10px;
-  }
-  & img {
-    width: 50px;
-  }
-`;
-
-const VersionControlBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 250px;
-  gap: 10px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 30px;
-  box-shadow: -5px -5px 5px 5px white, 5px 5px 30px 5px gray;
-  & h1 {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 20px;
-    font-size: 25px;
-    border-bottom: 3px solid gray;
-    color: orange;
-    padding-bottom: 10px;
-  }
-  & img {
-    width: 50px;
-  }
 `;
