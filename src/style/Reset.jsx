@@ -26,6 +26,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+  scroll-behavior: smooth;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -39,6 +40,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 ol, ul {
 	list-style: none;

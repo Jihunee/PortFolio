@@ -56,7 +56,7 @@ const Header = styled.div`
   border-bottom: 4px solid white;
   border-radius: 0 0 30px 30px;
   background-color: white;
-  border-bottom: 10px solid #d5b3ff;
+  border-bottom: 5px solid #d5b3ff;
   & a {
     text-decoration: none;
     color: inherit;
@@ -84,7 +84,6 @@ const NavBar = styled.div`
 `;
 
 const Logo = styled.div`
-  font-size: 60px;
   background: linear-gradient(to right top, #d5b3ff, #b8ffc7);
   color: transparent;
   background-clip: text;
