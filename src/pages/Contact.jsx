@@ -21,7 +21,10 @@ function Contact() {
         email,
         message,
       };
-      await axios.post(`http://localhost:3001/contact`, newContact);
+      await axios.post(
+        `https://turquoise-chartreuse-bear.glitch.me/contact`,
+        newContact
+      );
       setName("");
       setEmail("");
       setMessage("");
