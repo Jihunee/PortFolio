@@ -22,7 +22,7 @@ function Contact() {
         message,
       };
       await axios.post(
-        `https://turquoise-chartreuse-bear.glitch.me/contact`,
+        `${process.env.REACT_APP_JSON_SERVER}/contact`,
         newContact
       );
       setName("");
