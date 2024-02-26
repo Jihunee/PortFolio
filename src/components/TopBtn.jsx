@@ -7,7 +7,7 @@ function TopBtn() {
 
   const handleScroll = () => {
     if (!scrollToTopBtnRef.current) return;
-    if (window.scrollY > 80) {
+    if (window.scrollY > 250) {
       scrollToTopBtnRef.current.style.transform = "scale(1)";
     } else {
       scrollToTopBtnRef.current.style.transform = "scale(0)";

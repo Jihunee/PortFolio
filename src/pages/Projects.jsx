@@ -239,7 +239,7 @@ const Container = styled.div`
     rgb(168, 215, 255),
     rgb(255, 184, 211)
   );
-  margin-top: -15px;
+
   width: 100%;
   height: 100%;
   display: flex;
@@ -250,9 +250,13 @@ const Container = styled.div`
   padding-bottom: 50px;
   gap: 50px;
   font-family: "Cafe24";
+  margin-top: 20px;
+  border: 30px solid white;
+  border-radius: 80px;
 `;
 
 const ProjectBox = styled.div`
+  margin-top: 80px;
   width: 1200px;
   height: 800px;
   border-radius: 30px;

@@ -92,7 +92,10 @@ const Content = styled.div`
     font-size: 20px;
     line-height: 35px;
     & span {
-      color: hotpink;
+      background: linear-gradient(#adffe9, #a3abff);
+      color: transparent;
+      background-clip: text;
+      font-size: 30px;
     }
   }
 `;
@@ -122,9 +125,6 @@ const AvatarFigure = styled.div`
 const SwiperContentBox = styled.div`
   font-size: 50px;
   margin-bottom: 20px;
-  background: linear-gradient(#adffe9, #a3abff);
-  color: transparent;
-  background-clip: text;
 `;
 
 const Buttons = styled.div`
@@ -132,17 +132,14 @@ const Buttons = styled.div`
   margin-top: 20px;
   display: flex;
   gap: 20px;
-  margin-left: 20px;
+
   & button {
-    width: 70px;
-    height: 70px;
-    border-radius: 100%;
     background-color: transparent;
-    border: 5px solid #b8ffc7;
+    border: none;
     transition: all 0.1s ease-in-out;
     cursor: pointer;
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.5);
     }
   }
 `;
@@ -153,14 +150,13 @@ const Button = styled.div`
   align-items: center;
   margin-top: 20px;
   width: 25%;
-  height: 70px;
+  padding: 10px 0 10px 0;
   border-radius: 30px;
-  border: 5px solid #b8ffc7;
   cursor: pointer;
   transition: all 200ms ease-in-out;
+  box-shadow: -1px -1px 1px 1px white, 1px 1px 1px 1px gray;
   &:hover {
     transform: scale(1.1);
-    opacity: 0.7;
     & span {
       transition: all 0.3s ease-in-out;
       transform: translateX(15px);

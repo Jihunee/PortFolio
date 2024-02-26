@@ -59,7 +59,13 @@ function MySkills() {
           );
         })}
       </SkillBox>
-      <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "40px",
+        }}
+      >
         <SkillBox>
           <h1>Backend</h1>
           <ImageBox>

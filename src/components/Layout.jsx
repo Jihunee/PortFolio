@@ -56,7 +56,7 @@ const Header = styled.div`
   border-bottom: 4px solid white;
   border-radius: 0 0 30px 30px;
   background-color: white;
-  border-bottom: 3px solid gray;
+  box-shadow: -1px -1px 1px 1px white, 1px 1px 1px 1px gray;
   & a {
     text-decoration: none;
     color: inherit;

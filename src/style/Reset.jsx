@@ -39,8 +39,10 @@ body {
   background-image: url("assets/image/bg2.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  
+  background-size: cover;  
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 ol, ul {
 	list-style: none;
