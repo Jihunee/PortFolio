@@ -21,10 +21,7 @@ function Contact() {
         email,
         message,
       };
-      await axios.post(
-        `${process.env.REACT_APP_JSON_SERVER}/contact`,
-        newContact
-      );
+      await axios.post(`http://localhost:3001/contact`, newContact);
       setName("");
       setEmail("");
       setMessage("");
