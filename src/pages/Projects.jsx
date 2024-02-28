@@ -5,6 +5,14 @@ import { projectImgs1 } from "../data/imgData";
 import { projectImgs2 } from "../data/imgData";
 import { projectImgs3 } from "../data/imgData";
 import TopBtn from "../components/TopBtn";
+import {
+  projectData_Skills_1,
+  projectData_Skills_2,
+  projectData_Skills_3,
+  projectFront_Skills_1,
+  projectFront_Skills_2,
+  projectFront_Skills_3,
+} from "../data/skillsData";
 
 function Projects() {
   return (
@@ -33,26 +41,34 @@ function Projects() {
                 호감도를 쌓아 블라인드된 유저의 이미지를 볼 수 있습니다!
               </h2>
               <h2>
-                PWA를 실제로 구현해봄으로써 앞으로 웹 생태계가 뻗어나갈 무한한
-                가능성과 확장성을 몸소 체감할 수 있었으며 더 많은 유저의
-                참여율을 높일 수 있었습니다.
+                <span>PWA</span>를 실제로 구현해봄으로써 앞으로 웹 생태계가
+                뻗어나갈 무한한 가능성과 확장성을 몸소 체감할 수 있었으며 더
+                많은 유저의 참여율을 높일 수 있었습니다.
               </h2>
             </div>
             <div>
               <h3> 주요기능</h3>
-              <h4> 1. 소셜로그인을 통한 간단한 로그인</h4>
+              <h4>1. 소셜로그인을 통한 간단한 로그인</h4>
               <h4>2. 3D 카드 애니메이션, 활발한 대화를 통한 호감도 시스템</h4>
-              <h4> 3. 실시간 알림 및 실시간 채팅</h4>
+              <h4>3. 실시간 알림 및 실시간 채팅</h4>
               <h4>4. 소울메이트 달성 시 유저의 시크릿 사진 공개</h4>
             </div>
             <div>
               <h3>Frontend</h3>
-              NextJS 14 App Router, typeScript, tailwind, react-swiper, NextUI
+              <SkillContents>
+                {projectFront_Skills_1.map((item) => {
+                  return <SkillChip>{item}</SkillChip>;
+                })}
+              </SkillContents>
             </div>
-            <SkillContents>
-              <h3>Data Manamgement</h3> supabase, supabase-realtime,
-              supabase-Auth, recoil
-            </SkillContents>
+            <div>
+              <h3>Data Manamgement</h3>{" "}
+              <SkillContents>
+                {projectData_Skills_1.map((item) => {
+                  return <SkillChip>{item}</SkillChip>;
+                })}
+              </SkillContents>
+            </div>
             <SkillContents>
               <h3>GtiHub </h3>
               <a
@@ -120,11 +136,20 @@ function Projects() {
             </div>
             <div>
               <h3>Frontend</h3>
-              NextJS 14 App Router, typeScript, tailwind, MUI CSS,
+              <SkillContents>
+                {projectFront_Skills_2.map((item) => {
+                  return <SkillChip>{item}</SkillChip>;
+                })}
+              </SkillContents>
             </div>
-            <SkillContents>
-              <h3>Data Manamgement</h3> Recoil, React-query, supabase
-            </SkillContents>
+            <div>
+              <h3>Data Manamgement</h3>
+              <SkillContents>
+                {projectData_Skills_2.map((item) => {
+                  return <SkillChip>{item}</SkillChip>;
+                })}
+              </SkillContents>
+            </div>
             <SkillContents>
               <h3>GtiHub </h3>
               <a
@@ -194,12 +219,20 @@ function Projects() {
             </div>
             <div>
               <h3>Frontend</h3>
-              React, JavaScript, HTML, CSS, Styled Components, React-Router-Dom,
-              React-Query, React-Icons, Axios
+              <SkillContents>
+                {projectFront_Skills_3.map((item) => {
+                  return <SkillChip>{item}</SkillChip>;
+                })}
+              </SkillContents>
             </div>
-            <SkillContents>
-              <h3>Data Manamgement</h3> Redux-ToolKit, json-Server, React-Query
-            </SkillContents>
+            <div>
+              <h3>Data Manamgement</h3>{" "}
+              <SkillContents>
+                {projectData_Skills_3.map((item) => {
+                  return <SkillChip>{item}</SkillChip>;
+                })}
+              </SkillContents>
+            </div>
             <SkillContents>
               <h3>GtiHub </h3>
               <a
@@ -258,7 +291,7 @@ const Container = styled.div`
 const ProjectBox = styled.div`
   margin-top: 80px;
   width: 1200px;
-  height: 800px;
+  height: 820px;
   border-radius: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -297,11 +330,13 @@ const SlideImgs = styled.div`
   border-radius: 3px;
 `;
 const Content = styled.div`
+  padding-bottom: 20px;
+  scale: 0.9;
   width: 50%;
   height: 700px;
-  padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 20px;
   & h1 {
     font-size: 22px;
@@ -314,6 +349,7 @@ const Content = styled.div`
   }
   & h3 {
     font-size: 19px;
+    margin-bottom: 5px;
   }
   & a {
     text-decoration: none;
@@ -328,4 +364,18 @@ const SkillContents = styled.div`
   display: flex;
   gap: 10px;
   align-items: center;
+  flex-wrap: wrap;
+`;
+
+const SkillChip = styled.div`
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: -1px -1px 1px 1px white, 1px 1px 1px 1px gray;
+  background: linear-gradient(
+    to right top,
+    rgb(168, 215, 255),
+    rgb(255, 184, 211)
+  );
+  font-size: 15px;
 `;

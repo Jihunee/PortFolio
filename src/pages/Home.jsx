@@ -37,14 +37,14 @@ function Home() {
               window.open("https://github.com/Jihunee", "_blank");
             }}
           >
-            <FaGithub size={25} />
+            <FaGithub fill="skyblue" size={25} />
           </button>
           <button
             onClick={() => {
               window.open("https://jihune6439.tistory.com", "_blank");
             }}
           >
-            <FaBlog size={25} />
+            <FaBlog fill="skyblue" size={25} />
           </button>
         </Buttons>
         <Button
