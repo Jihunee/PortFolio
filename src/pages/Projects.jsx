@@ -163,7 +163,7 @@ function Projects() {
             <SkillContents>
               <h3>URL </h3>
               <a
-                href="https://mechuli.vercel.app/"
+                href="https://daily-c-zeta.vercel.app/main"
                 target="_blank"
                 rel="noreferrer"
               >
