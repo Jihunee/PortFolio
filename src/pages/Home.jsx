@@ -60,7 +60,7 @@ function Home() {
       </Content>
       <AvatarContainer>
         <AvatarFigure>
-          <img src="assets/image/profileImg.png" alt="프로필 이미지" />
+          <img src="assets/image/profileImg.jpg" alt="프로필 이미지" />
         </AvatarFigure>
       </AvatarContainer>
     </Container>
